@@ -26,8 +26,8 @@ jobs:
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_PORT: ${{ secrets.SSH_PORT }}          
 
-      - name: Deploy from dev
-        run: ssh dev 'cd /var/www/dev.ravvivando.se && git fetch && git reset --hard origin/dev'
+      - name: Deploy from dev (Important how to link npm for sudoers https://stackoverflow.com/questions/62863080/github-actions-err-bash-line-3-npm-command-not-found )
+        run: ssh dev 'cd /var/www/dev.ravvivando.se && git fetch && git reset --hard origin/dev && npm install'
 
-      - name: Restart app (All of pm2 unfortunately. So you must have done "pm2 save" on your processes and run setup with "pm2 startup")
-        run: ssh dev 'systemctl restart pm2-root.service'
+      - name: Restart app (Important how to link pm2 for sudoers https://stackoverflow.com/questions/62863080/github-actions-err-bash-line-3-npm-command-not-found )
+        run: ssh production 'pm2 restart dev'
