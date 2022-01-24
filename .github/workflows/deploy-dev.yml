@@ -30,4 +30,4 @@ jobs:
         run: ssh dev 'cd /var/www/dev.ravvivando.se && git fetch && git reset --hard origin/dev && npm install'
 
       - name: Restart app (Important how to link pm2 for sudoers https://stackoverflow.com/questions/62863080/github-actions-err-bash-line-3-npm-command-not-found )
-        run: ssh production 'pm2 restart dev'
+        run: ssh dev 'pm2 restart dev'
