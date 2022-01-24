@@ -6,8 +6,8 @@ let express = require('express')
 const app = express()
 
 // basic authentication
-const auth = require('./auth')
-app.use(auth)
+// const auth = require('./auth')
+// app.use(auth)
 
 // serve frontend files (built)
 app.use(express.static('./www'));
