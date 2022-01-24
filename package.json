@@ -1,0 +1,23 @@
+{
+  "name": "deployment-with-actions-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "auth.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WeeHorse/deployment-with-actions-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WeeHorse/deployment-with-actions-example/issues"
+  },
+  "homepage": "https://github.com/WeeHorse/deployment-with-actions-example#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
