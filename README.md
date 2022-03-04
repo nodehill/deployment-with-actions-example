@@ -1,4 +1,3 @@
 # deployment-with-actions-example
 
-Description
-Thingy
+Description Thingy.
